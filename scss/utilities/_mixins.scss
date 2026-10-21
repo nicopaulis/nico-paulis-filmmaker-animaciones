@@ -1,0 +1,6 @@
+// Media query mobile-first reutilizable para los puntos de quiebre del sitio.
+@mixin media-up($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}

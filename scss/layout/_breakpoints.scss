@@ -1,0 +1,124 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* Breakpoint tablet: dos columnas */
+@include media-up($breakpoint-tablet) {
+  .container,
+  .page-shell {
+    width: min(var(--content-width), calc(100% - 3rem));
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-services__cards {
+    grid-template-areas:
+      "realizacion imagen"
+      "montaje montaje";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-types__cards {
+    grid-template-areas:
+      "cortometrajes videoclips"
+      "marcas marcas";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pill-list,
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+
+/* Bootstrap despliega la barra en una sola fila desde el breakpoint lg. */
+@include media-up($breakpoint-navbar) {
+  .site-navbar {
+    .navbar-collapse {
+      flex-basis: auto;
+    }
+
+    .navbar-nav {
+      gap: 0.35rem 1.1rem;
+      padding-block: 0;
+    }
+  }
+}
+
+/* Breakpoint desktop: grilla de varias columnas */
+@include media-up($breakpoint-desktop) {
+  .gallery-section {
+    grid-template-areas: "intro" "gallery";
+    gap: 2rem;
+  }
+
+  .gallery-card {
+    aspect-ratio: 16 / 8;
+
+    &__caption {
+      right: 2rem;
+      bottom: 1.75rem;
+      left: 2rem;
+    }
+  }
+
+  .page-hero:not(.page-hero--text) {
+    grid-template-areas: "copy media";
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.82fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    min-height: 560px;
+    padding-block: clamp(4rem, 9vw, 7.5rem);
+  }
+
+  .page-hero--text {
+    min-height: 410px;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: end;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-media {
+    justify-self: end;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .portfolio-services {
+    grid-template-areas: "intro cards";
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    column-gap: clamp(2rem, 5vw, 5rem);
+
+    &__cards {
+      grid-template-areas:
+        "realizacion imagen"
+        "montaje montaje";
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .project-types {
+    &__cards {
+      grid-template-areas: "cortometrajes videoclips marcas";
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .pill-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

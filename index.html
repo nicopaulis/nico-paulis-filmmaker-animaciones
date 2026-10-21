@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio audiovisual de Nico Paulis, filmmaker.">
+  <title>Nico Paulis | Filmmaker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar" aria-label="Navegación principal">
+      <div class="container header-inner">
+        <a class="navbar-brand brand" href="index.html">Nico Paulis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse site-nav" id="siteNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero" aria-labelledby="titulo-principal">
+      <div class="hero-copy">
+        <p class="eyebrow">Filmmaker · Uruguay</p>
+        <h1 id="titulo-principal">Nico Paulis, filmmaker</h1>
+        <p class="lead">Creo historias audiovisuales con una mirada propia. Este espacio reúne quién soy, los proyectos que realizo y las formas de ponerse en contacto conmigo.</p>
+        <div class="hero-actions">
+          <a class="button" href="pages/proyectos.html">Ver proyectos</a>
+          <a class="button button--secondary" href="pages/contacto.html">Hablemos</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/nico-paulis.jpg" alt="Retrato de Nico Paulis mirando hacia una luz.">
+        <figcaption>Nico Paulis — filmmaker.</figcaption>
+      </figure>
+    </section>
+
+    <section class="content-section portfolio-services" aria-labelledby="titulo-mirada">
+      <div class="section-intro portfolio-services__intro">
+        <p class="eyebrow">Una mirada, muchas posibilidades</p>
+        <h2 id="titulo-mirada">Historias que se cuentan con imágenes</h2>
+        <p>Trabajo con imágenes, ritmo y sonido para dar forma a historias audiovisuales. Cada proyecto comienza por entender qué quiere contar y a quién quiere llegar.</p>
+      </div>
+      <div class="card-grid portfolio-services__cards">
+        <article class="card portfolio-service-card--realizacion">
+          <span class="card-number">01</span>
+          <h3>Realización</h3>
+          <p>Dirección y producción audiovisual con una idea clara como punto de partida.</p>
+        </article>
+        <article class="card portfolio-service-card--imagen">
+          <span class="card-number">02</span>
+          <h3>Imagen</h3>
+          <p>Cámara y fotografía al servicio del tono y la identidad de cada historia.</p>
+        </article>
+        <article class="card portfolio-service-card--montaje">
+          <span class="card-number">03</span>
+          <h3>Montaje</h3>
+          <p>Edición, ritmo y sonido para construir una pieza con intención.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section gallery-section" aria-labelledby="titulo-galeria">
+      <div class="section-intro">
+        <p class="eyebrow">Galería audiovisual</p>
+        <h2 id="titulo-galeria">Una historia también vive en cada imagen</h2>
+        <p>Explorá distintos encuadres, luces y detalles de una misma mirada visual.</p>
+      </div>
+      <div id="portfolioGalleryHome" class="carousel slide portfolio-carousel" data-bs-ride="carousel" data-bs-interval="6000" aria-label="Galería de imágenes">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#portfolioGalleryHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mostrar imagen 1"></button>
+          <button type="button" data-bs-target="#portfolioGalleryHome" data-bs-slide-to="1" aria-label="Mostrar imagen 2"></button>
+          <button type="button" data-bs-target="#portfolioGalleryHome" data-bs-slide-to="2" aria-label="Mostrar imagen 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a class="gallery-card gallery-card--portrait" href="pages/proyectos.html#titulo-seleccion" aria-label="Ver proyectos: retrato y luz">
+              <img class="gallery-card__image" src="assets/nico-paulis.jpg" alt="Retrato cinematográfico de Nico Paulis bajo una luz cenital">
+              <span class="gallery-card__caption"><span class="gallery-card__number">01 · Retrato</span><span class="gallery-card__title">La luz como punto de partida</span></span>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a class="gallery-card gallery-card--detail" href="pages/proyectos.html#titulo-seleccion" aria-label="Ver proyectos: detalle y composición">
+              <img class="gallery-card__image" src="assets/nico-paulis.jpg" alt="Detalle del retrato y su composición en sombras">
+              <span class="gallery-card__caption"><span class="gallery-card__number">02 · Composición</span><span class="gallery-card__title">Encuadres que construyen atmósfera</span></span>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a class="gallery-card gallery-card--light" href="pages/proyectos.html#titulo-seleccion" aria-label="Ver proyectos: tono visual">
+              <img class="gallery-card__image" src="assets/nico-paulis.jpg" alt="Retrato con contraste suave y atmósfera cinematográfica">
+              <span class="gallery-card__caption"><span class="gallery-card__number">03 · Lenguaje visual</span><span class="gallery-card__title">Cada historia encuentra su tono</span></span>
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioGalleryHome" data-bs-slide="prev" aria-label="Imagen anterior"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioGalleryHome" data-bs-slide="next" aria-label="Imagen siguiente"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="titulo-explorar">
+      <div class="section-intro">
+        <p class="eyebrow">Portfolio</p>
+        <h2 id="titulo-explorar">Explorá el trabajo</h2>
+      </div>
+      <ul class="pill-list">
+        <li><a class="text-link" href="pages/sobre-mi.html">Conocé más sobre mí</a></li>
+        <li><a class="text-link" href="pages/proyectos.html">Explorá los proyectos</a></li>
+        <li><a class="text-link" href="pages/servicios.html">Conocé los servicios</a></li>
+        <li><a class="text-link" href="pages/contacto.html">Hablemos de tu idea</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nico Paulis · Filmmaker</p>
+      <nav class="footer-nav" aria-label="Redes sociales">
+        <ul>
+          <li><a href="https://www.instagram.com/nicopaulis_foto/">Instagram</a></li>
+          <li><a href="https://youtube.com/playlist?list=PLW6AQ1zS8AbAlnMcdTaYXq33sdAaVUyKq&amp;si=CeMsEepZcjdZLpNg">YouTube</a></li>
+          <li><a href="https://www.behance.net/gallery/230146451/Filmmaking-Editing-Reel-Grupo-Punto-%28Feb-Jun-2025%29">Behance</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

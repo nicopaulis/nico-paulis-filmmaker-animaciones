@@ -1,0 +1,13 @@
+{
+  "name": "nico-paulis-filmmaker-scss",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Portafolio de Nico Paulis con arquitectura SCSS modular.",
+  "scripts": {
+    "build:css": "sass --no-source-map scss/main.scss styles/styles.css",
+    "watch:css": "sass --watch scss/main.scss:styles/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}

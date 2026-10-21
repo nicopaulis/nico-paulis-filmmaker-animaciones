@@ -1,0 +1,64 @@
+/* En móvil, el hero apila el texto y la imagen en una columna. */
+.page-hero {
+  display: grid;
+  grid-template-areas:
+    "copy"
+    "media";
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 2.25rem;
+  min-height: 0;
+  padding-block: clamp(3.5rem, 10vw, 5rem);
+
+  &--text {
+    grid-template-areas: "copy";
+    padding-bottom: 3rem;
+  }
+}
+
+.hero-copy {
+  grid-area: copy;
+  max-width: 650px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.hero-media {
+  position: relative;
+  grid-area: media;
+  justify-self: center;
+  width: min(100%, 520px);
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    inset: 1rem -1rem -1rem 1rem;
+    border: 1px solid var(--color-accent-frame);
+    content: "";
+  }
+
+  img {
+    width: 100%;
+    max-height: 520px;
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.82);
+  }
+
+  figcaption {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.85rem;
+    padding-inline: 1.35rem;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+}

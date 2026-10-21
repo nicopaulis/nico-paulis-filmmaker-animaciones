@@ -1,0 +1,80 @@
+@use "../utilities/variables" as *;
+
+/* ------------------------------
+   Box Model: reinicio global
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   Paleta y tipografías
+------------------------------ */
+:root {
+  color-scheme: dark;
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-surface-soft: #{$color-surface-soft};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
+  --color-accent: #{$color-accent};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-accent-hover: #{$color-accent-hover};
+  --color-ink: #{$color-ink};
+  --color-footer-background: #{$color-footer-background};
+  --color-line: #{$color-line};
+  --color-navbar-background: #{$color-navbar-background};
+  --color-accent-wash: #{$color-accent-wash};
+  --color-accent-frame: #{$color-accent-frame};
+  --color-card-overlay: #{$color-card-overlay};
+  --color-image-overlay: #{$color-image-overlay};
+  --color-control-hover: #{$color-control-hover};
+  --color-control-active: #{$color-control-active};
+  --font-body: #{$font-body};
+  --font-heading: #{$font-heading};
+  --content-width: #{$content-width};
+}
+
+/* ------------------------------
+   Base y fondo
+------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 82% 0%, var(--color-accent-wash), transparent 32rem),
+    var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 160ms ease;
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 3px;
+  }
+}

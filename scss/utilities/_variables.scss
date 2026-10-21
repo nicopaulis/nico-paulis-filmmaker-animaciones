@@ -1,0 +1,28 @@
+// Colores, tipografías y medidas centrales del sistema visual.
+$color-background: #101319;
+$color-surface: #191e27;
+$color-surface-soft: #202733;
+$color-text: #f3f1ec;
+$color-muted: #b0b4bd;
+$color-accent: #e6aa63;
+$color-accent-dark: #bd7c38;
+$color-accent-hover: #ffd19a;
+$color-ink: #171717;
+$color-footer-background: #0b0d12;
+
+$color-line: rgba(243, 241, 236, 0.14);
+$color-navbar-background: rgba(16, 19, 25, 0.9);
+$color-accent-wash: rgba(230, 170, 99, 0.08);
+$color-accent-frame: rgba(230, 170, 99, 0.55);
+$color-card-overlay: rgba(25, 30, 39, 0.72);
+$color-image-overlay: rgba(8, 10, 14, 0.9);
+$color-control-hover: rgba(16, 19, 25, 0.24);
+$color-control-active: rgba(230, 170, 99, 0.18);
+
+$font-body: 'DM Sans', sans-serif;
+$font-heading: 'Playfair Display', Georgia, serif;
+$content-width: 1120px;
+
+$breakpoint-tablet: 640px;
+$breakpoint-navbar: 992px;
+$breakpoint-desktop: 1024px;

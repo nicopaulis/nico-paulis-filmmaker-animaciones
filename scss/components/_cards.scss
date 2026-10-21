@@ -1,0 +1,120 @@
+/* ------------------------------
+   Grillas, tarjetas y listas
+------------------------------ */
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.portfolio-services__cards {
+  grid-area: cards;
+  grid-template-areas:
+    "realizacion"
+    "imagen"
+    "montaje";
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-types__cards {
+  grid-area: cards;
+  grid-template-areas:
+    "cortometrajes"
+    "videoclips"
+    "marcas";
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.portfolio-service-card {
+  &--realizacion {
+    grid-area: realizacion;
+  }
+
+  &--imagen {
+    grid-area: imagen;
+  }
+
+  &--montaje {
+    grid-area: montaje;
+  }
+}
+
+.project-type-card {
+  &--cortometrajes {
+    grid-area: cortometrajes;
+  }
+
+  &--videoclips {
+    grid-area: videoclips;
+  }
+
+  &--marcas {
+    grid-area: marcas;
+  }
+}
+
+.card {
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--color-line);
+  background: linear-gradient(145deg, var(--color-surface), var(--color-card-overlay));
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-number {
+  display: block;
+  margin-bottom: 1.4rem;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.pill-list,
+.steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+}
+
+.steps {
+  counter-reset: process;
+
+  li {
+    counter-increment: process;
+
+    &::before {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--color-accent);
+      content: "0" counter(process);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+  }
+}
+
+.text-link {
+  font-weight: 600;
+}
+
+.section-contact-note {
+  margin-top: 2rem;
+}

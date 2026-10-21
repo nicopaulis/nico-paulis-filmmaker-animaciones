@@ -1,0 +1,38 @@
+/* ------------------------------
+   Navegación y estructura
+------------------------------ */
+.container {
+  width: min(var(--content-width), calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-navbar-background);
+}
+
+.header-inner {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.page-shell {
+  width: min(var(--content-width), calc(100% - 3rem));
+  min-height: 65vh;
+  margin-inline: auto;
+}

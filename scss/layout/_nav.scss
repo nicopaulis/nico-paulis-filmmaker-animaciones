@@ -1,0 +1,91 @@
+/* ------------------------------
+   Navbar responsiva de Bootstrap
+------------------------------ */
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navbar {
+  --bs-navbar-color: var(--color-muted);
+  --bs-navbar-hover-color: var(--color-accent);
+  --bs-navbar-active-color: var(--color-accent);
+  --bs-navbar-brand-color: var(--color-text);
+  --bs-navbar-brand-hover-color: var(--color-accent);
+  --bs-navbar-toggler-border-color: var(--color-line);
+  padding-block: 0;
+
+  .header-inner {
+    min-height: 82px;
+    gap: 1rem;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbar-toggler {
+    border-color: var(--color-line);
+    transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+
+    &:hover {
+      border-color: var(--color-accent);
+      background-color: var(--color-accent-wash);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+      box-shadow: none;
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+
+  .navbar-collapse {
+    flex-basis: 100%;
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
+    padding-block: 0.75rem 1rem;
+  }
+
+  .nav-link {
+    width: fit-content;
+    padding: 0.55rem 0.25rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 180ms ease, transform 180ms ease;
+
+    &:hover,
+    &:focus-visible,
+    &.active {
+      color: var(--color-accent);
+    }
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    &:active {
+      color: var(--color-text);
+      transform: translateY(1px);
+    }
+  }
+}
