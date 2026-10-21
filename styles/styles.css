@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.portfolio-carousel, .card, .pill-list li,
+.steps li {
+  border: 1px solid var(--color-line);
+}
+
+.site-navbar .navbar-toggler:focus-visible, .site-navbar .nav-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 /* ------------------------------
    Box Model: reinicio global
 ------------------------------ */
@@ -74,6 +84,20 @@ a:focus-visible {
   border-radius: 3px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after,
+  .animate__animated {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+}
 /* ------------------------------
    Navegación y estructura
 ------------------------------ */
@@ -151,8 +175,6 @@ a:focus-visible {
   background-color: var(--color-accent-wash);
 }
 .site-navbar .navbar-toggler:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
   box-shadow: none;
 }
 .site-navbar .navbar-toggler:active {
@@ -180,8 +202,6 @@ a:focus-visible {
   transform: translateY(-1px);
 }
 .site-navbar .nav-link:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
   border-radius: 2px;
 }
 .site-navbar .nav-link:active {
@@ -411,7 +431,6 @@ p {
 .card {
   height: 100%;
   padding: clamp(1.25rem, 3vw, 2rem);
-  border: 1px solid var(--color-line);
   background: linear-gradient(145deg, var(--color-surface), var(--color-card-overlay));
 }
 .card p:last-child {
@@ -441,7 +460,6 @@ p {
 .steps li {
   min-width: 0;
   padding: 1.25rem;
-  border: 1px solid var(--color-line);
   background: var(--color-surface);
   color: var(--color-text);
 }
@@ -473,6 +491,16 @@ p {
 /* ------------------------------
    Carruseles Bootstrap y galería
 ------------------------------ */
+@keyframes caption-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .gallery-section {
   display: grid;
   grid-template-areas: "intro" "gallery";
@@ -490,7 +518,6 @@ p {
   max-width: 920px;
   margin-inline: auto;
   overflow: hidden;
-  border: 1px solid var(--color-line);
   background: var(--color-surface);
 }
 .portfolio-carousel .carousel-indicators [data-bs-target] {
@@ -524,6 +551,10 @@ p {
 .portfolio-carousel .carousel-control-prev:active,
 .portfolio-carousel .carousel-control-next:active {
   background-color: var(--color-control-active);
+}
+
+.carousel-item.active .gallery-card__caption {
+  animation: caption-reveal 520ms ease-out 80ms both;
 }
 
 .gallery-card {
@@ -630,7 +661,7 @@ p {
 }
 
 /* Breakpoint tablet: dos columnas */
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .container,
   .page-shell {
     width: min(var(--content-width), 100% - 3rem);

@@ -1,13 +1,28 @@
 /* ------------------------------
    Carruseles Bootstrap y galería
 ------------------------------ */
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+@keyframes caption-reveal {
+  from {
+    opacity: 0;
+    transform: translateY($animation-offset * -1);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .gallery-section {
   display: grid;
   grid-template-areas:
     "intro"
     "gallery";
   grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem;
+  gap: $spacing-section;
 
   .section-intro {
     grid-area: intro;
@@ -21,7 +36,7 @@
   max-width: 920px;
   margin-inline: auto;
   overflow: hidden;
-  border: 1px solid var(--color-line);
+  @extend %bordered-surface;
   background: var(--color-surface);
 
   .carousel-indicators [data-bs-target] {
@@ -60,6 +75,10 @@
       background-color: var(--color-control-active);
     }
   }
+}
+
+.carousel-item.active .gallery-card__caption {
+  @include apply-motion(caption-reveal, 520ms, 80ms, ease-out);
 }
 
 .gallery-card {

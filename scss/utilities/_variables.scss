@@ -23,6 +23,10 @@ $font-body: 'DM Sans', sans-serif;
 $font-heading: 'Playfair Display', Georgia, serif;
 $content-width: 1120px;
 
-$breakpoint-tablet: 640px;
+$breakpoint-tablet: 768px;
 $breakpoint-navbar: 992px;
 $breakpoint-desktop: 1024px;
+
+$spacing-unit: 1rem;
+$spacing-section: $spacing-unit + 0.5rem;
+$animation-offset: 12px;
