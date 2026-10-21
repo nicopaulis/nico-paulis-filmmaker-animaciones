@@ -580,16 +580,6 @@ p {
   object-position: center 34%;
   transition: transform 420ms ease, filter 420ms ease;
 }
-.gallery-card--detail .gallery-card__image {
-  object-position: center 45%;
-  filter: saturate(0.68) contrast(1.08);
-  transform: scale(1.3);
-}
-.gallery-card--light .gallery-card__image {
-  object-position: center 62%;
-  filter: sepia(0.14) saturate(0.82) brightness(1.12);
-  transform: scale(1.08);
-}
 .gallery-card__caption {
   position: absolute;
   z-index: 1;
