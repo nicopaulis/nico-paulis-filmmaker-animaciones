@@ -1,6 +1,6 @@
 # Nico Paulis · Filmmaker
 
-Portafolio audiovisual con Bootstrap y estilos propios organizados en módulos SCSS.
+Portafolio audiovisual de Nico Paulis. Esta entrega suma animaciones sutiles, SCSS avanzado y revisión responsive sobre la arquitectura del módulo anterior.
 
 ## Estructura
 
@@ -14,11 +14,18 @@ Portafolio audiovisual con Bootstrap y estilos propios organizados en módulos S
 - `styles/styles.css`: hoja compilada que enlazan las cinco páginas.
 - `assets/`: imagen del portafolio.
 
+## Animación y responsive
+
+- La portada usa Animate.css en el título principal.
+- El texto de cada slide activa una animación nativa de SCSS.
+- Un mixin parametrizado aplica animaciones y placeholders compartidos se extienden en componentes.
+- Los estilos parten de una columna en mobile y escalan desde 768px y 1024px.
+
 ## Compilar estilos
 
 Instalá las dependencias con `pnpm install` y ejecutá `pnpm build:css` para compilar `scss/main.scss` en `styles/styles.css`. Para recompilar al guardar cambios, ejecutá `pnpm watch:css`.
 
-Bootstrap y Google Fonts se cargan desde sus CDN. La navbar Bootstrap sigue presente en las cinco páginas; el carousel aparece en Inicio y Proyectos.
+Bootstrap, Animate.css y Google Fonts se cargan desde sus CDN. La navbar Bootstrap sigue presente en las cinco páginas; el carousel aparece en Inicio y Proyectos.
 
 ## Abrir localmente
 
